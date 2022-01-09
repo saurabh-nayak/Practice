@@ -22,7 +22,7 @@ public class Conversion {
 
 		Character ch='a';
 		int m= ch;   //Widening conversion work
-		/* Integer m= ch; */   //not work because of Wrapper.
+		/* Integer m= ch; */    //not work because of Wrapper.
 		
 		//cannot convert from char to short or short to char.
 //		char x= 'x';

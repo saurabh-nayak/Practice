@@ -14,7 +14,6 @@ public class Main {
 
 			@Override
 			public void run() {
-				
 				System.out.println("Thread: "+Thread.currentThread().getName());
 				System.out.println("Total active threads: "+Thread.activeCount());
 				Thread.enumerate(tArray);
@@ -22,7 +21,6 @@ public class Main {
 						Thread.sleep(100);
 						Thread.currentThread().interrupt();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					System.out.println("before wait");

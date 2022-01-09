@@ -4,6 +4,7 @@ package com.saurabh.collection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -56,7 +57,6 @@ public class Main {
 	    ll.add("saurabh");
 	    ll.add("maya");
 	    System.out.println(ll.get(1));
-	    
 	    //TreeMap uses comparator to sort key of map
 	    Map<Employee,String> map= new TreeMap(new EmployeeComparator());
 	    map.put(new Employee(103,"sagar","aa"), "andrew");

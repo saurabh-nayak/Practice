@@ -24,7 +24,7 @@ public static void main(String[] args) {
 	 * cannot invoke add method to list or any collection which created using of or copyOf method
 	 * because it returns unmodifiable object of List12<> class which is static final inner class
 	 *  of ImmutableCollections class in which it store object as @Stable which is same as final.
-	 *  null values not allowed in List, Set or any Collection
+	 *  null values not allowed in List, Set or any Collection created using of method
 	 * 
 	 * */
 	List<Integer> list=List.of(100,200);
@@ -53,6 +53,10 @@ public static void main(String[] args) {
 	Map<Integer, String> map= Map.ofEntries(mapE1, mapE2);
 	System.out.println(map);
 	
+	/*
+	 * getOrDefault method return value of that key or default given value
+	 */
+	System.out.println(map.getOrDefault(103, "No one"));
 	
 	/*
 	 *null key or value not allowed in entry method of Map 

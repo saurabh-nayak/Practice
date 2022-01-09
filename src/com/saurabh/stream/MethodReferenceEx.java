@@ -1,8 +1,10 @@
-package com.saurabh.string;
+package com.saurabh.stream;
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+
+import com.saurabh.string.Functional;
 
 //Method reference example
 public class MethodReferenceEx {

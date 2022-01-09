@@ -7,10 +7,11 @@ import java.lang.annotation.Target;
  * 2)Annotation type cannot have constructor
  * 2)methods cannot have implementation or return type
  * 3)method cannot have throws signature
+ * 4)can declare with or without public access specifier
  * 
  */
 @Target(ElementType.METHOD)
-public @interface CustomAnnot  {
+@interface CustomAnnot  {
 	
 	public int value() default 10;
 

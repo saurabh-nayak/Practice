@@ -29,7 +29,7 @@ public class MapExample {
 		System.out.println(empMap.put(101, new Employee(101, "saurabh", "java")));
 //		System.out.println(empMap.put(101,  new Employee(103, "dhenier", "scott")));
 		empMap.put(101, new Employee(101, "saurabh", "java"));
-//		empMap.compute(101, (k,v)->(v==null)?new Employee(103, "bhojpuri", "commando"):empMap.get(101));
+		empMap.compute(101, (k,v)->(v==null)?new Employee(103, "bhojpuri", "commando"):empMap.get(101));
 		
 		/*
 		 * can put one null as key and any number of null as value in HashMap
@@ -74,7 +74,7 @@ public class MapExample {
 		System.out.println("Returned: "+empMap.computeIfAbsent(102, (k)->new Employee(102, "bhojpuri", "commando")));
 		System.out.println("Returned: "+empMap.putIfAbsent(102,new Employee(102, "bhojpuri", "commando")));
 		
-		//computeIfPresent method accepts 2 args 1 for key and 2nd for BiFunction whch takes 2 args and returns type of value
+		//computeIfPresent method accepts 2 args 1 for key and 2nd for BiFunction which takes 2 args and returns type of value
 		empMap.computeIfPresent(101, (k,v)->{if(v.department.equals("java")) {v.department="Node";}return v;});
 		empMap.put(102, new Employee(102, "ab villiers", "php"));
 		empMap.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toList()).forEach(System.out::println);

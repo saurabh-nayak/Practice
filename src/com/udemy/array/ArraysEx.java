@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.udemy.array;
 import java.util.Arrays;
 import java.util.Comparator;
 

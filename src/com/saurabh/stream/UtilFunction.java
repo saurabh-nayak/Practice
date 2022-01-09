@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.saurabh.stream;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
@@ -29,6 +29,8 @@ import java.util.function.ToIntBiFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
 import java.util.function.UnaryOperator;
+
+import com.saurabh.string.Product;
 
 public class UtilFunction {
 
@@ -79,7 +81,7 @@ public class UtilFunction {
            * 3)BiFunction<T,U,R> interface takes 2 type T and U as args as input to method and returns type R
            * 4)ToDoubleFunction<T> accepts T type as arg returns premitive double type
            *   ToIntFunction<T>, ToLongFunction<T> do as per name 
-           * 5)ToIntBiFunction<T,R>, ToLongBiFunction<T,R>, ToDoubleBiFunction<T,R> accepts 2 type T, R as arguments
+           * 5)ToIntBiFunction<T,U>, ToLongBiFunction<T,U>, ToDoubleBiFunction<T,U> accepts 2 type T, U as arguments
            * and return as per name
            * 6)IntToDoubleFunction int as input double as output
            *   DoubleToLongFunction, LongToDoubleFunction, LongToIntFunction as per name

@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.saurabh.stream;
 
 public class Product {
 	
@@ -12,9 +12,9 @@ public class Product {
 		this.pname = pname;
 		this.pprice = pprice;
 	}
-	public int pid;
-	public String pname;
-	public int pprice;
+	int pid;
+	String pname;
+	int pprice;
 	public int getPid() {
 		return pid;
 	}

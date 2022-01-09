@@ -9,13 +9,13 @@ public class InterruptThreadExample extends Thread{
 	@Override
 	public void run()
 	{
-		/*try {
-			sleep method may throw checked exception Interrupted exception
-			Thread.sleep(100);
+		try {
+//			sleep method may throw checked exception Interrupted exception
+			Thread.sleep(1000);
 			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}*/
+		}
 		int i=1;
 		while(i!=100)
 		list.add(i);i++;
@@ -39,6 +39,7 @@ public class InterruptThreadExample extends Thread{
                  /*InterruptedException will be thrown when interrupt method called on thread  when
                   * thread is in sleep state or wait state
                   * */
+//                 th1.start();
 //               th1.interrupt();
                  InterruptThreadExample.newTh();
 	}

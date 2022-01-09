@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.saurabh.stream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +9,18 @@ public class OptionalEx {
 		//isPresent method
 		String str1="";String str2=null;String str3="thats a string";
 		
+		/*
+		 * NullPointerException when pass null in of method and call get method
+		 */
+//		Optional<Integer> optional=Optional.of(null);
+//		System.out.println(optional.get());
+		
 		Optional<String> optStr1=Optional.ofNullable(str1);
 		if(optStr1.isPresent()) { System.out.println("opstring1"+optStr1.get());}
 		
+		/*
+		 * isPresent returns false if string is null
+		 */
 		Optional<String> optStr2=Optional.ofNullable(str2);
 		if(optStr2.isPresent()) { System.out.println("opstring2"+optStr2.get());}
 		

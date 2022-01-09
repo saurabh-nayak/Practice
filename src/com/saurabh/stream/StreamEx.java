@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.saurabh.stream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
@@ -8,6 +8,8 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import com.saurabh.string.Product;
 
 public class StreamEx {
 
@@ -35,6 +37,7 @@ public class StreamEx {
 		
 		//find maximum and minimum price
 		System.out.println("minimum laptop price "+productList.stream().min((p1,p2)->p1.pprice>p2.pprice? 1:-1).get().getPprice());
+		System.out.println(productList.stream().min(Comparator.comparing(Product::getPprice)).get().getPprice());
 		
 		List<Integer> intList =  new ArrayList<>();
 		intList.add(10);intList.add(11);intList.add(13);intList.add(15);intList.add(17);intList.add(20);intList.add(25);
@@ -107,7 +110,9 @@ public class StreamEx {
 		System.out.println("peek method");
 		listInt.stream().peek(i->System.out.println(i=i*2)).limit(5).forEach(System.out::println);
 		
+		//perform operations on each element of the stream in peek method
 		System.out.println("Count of peek"+listInt.stream().peek(i->System.out.println(i=i*2)).count());
+		
 		//returns stream after skipping first n elements
 //		listInt.stream().skip(9900).forEach(System.out::println);
 		
@@ -137,8 +142,8 @@ public class StreamEx {
 		 * In flatMapToDouble method lambda will return a DoubleStream but in mapToDouble lambda should return double type value
 		 * thats the difference
 		 * */
-//		listInt.stream().flatMap((i)->{if(i>9989) {blankList.add(i);}return blankList.stream();}).forEach(System.out::println);;
-//		listInt.stream().flatMapToDouble((i)->{if(i>9989) {blankList.add(i);}return (blankList.stream().mapToDouble(j->Double.parseDouble(j.toString())));}).forEach(System.out::println);
+		listInt.stream().flatMap((i)->{if(i>9989) {blankList.add(i);}return blankList.stream();}).forEach(System.out::println);;
+		listInt.stream().flatMapToDouble((i)->{if(i>9989) {blankList.add(i);}return (blankList.stream().mapToDouble(j->Double.parseDouble(j.toString())));}).forEach(System.out::println);
 		
 		
 		/*

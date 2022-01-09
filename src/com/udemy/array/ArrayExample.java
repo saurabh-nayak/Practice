@@ -1,4 +1,4 @@
-package com.saurabh.string;
+package com.udemy.array;
 
 public class ArrayExample {
 

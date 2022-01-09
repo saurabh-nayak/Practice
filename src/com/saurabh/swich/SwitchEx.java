@@ -51,7 +51,26 @@ public class SwitchEx {
 		  switch(l) {
 		  
 		  }
-		 
+		  /*
+		   * "cannot swith on value type of float"
+		   * will get this error when will try to use float value in switch statement
+		   */
+//		 float i=5;
+//		 switch(i) {
+//		 case 5:
+//		 }
+//		  Float f=1.1f;
+//		  switch(f) {
+//		  
+//		  }
+		  
+		  /*
+		   * int allowed in switch statement
+		   */
+//			 int i=5;
+//			 switch(i) {
+//			 case 5:
+//			 }
 	}
 
 }
