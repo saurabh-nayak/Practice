@@ -1,11 +1,27 @@
 package com.saurabh.polymorphism;
 public class PlolymorphismAbstraction extends AbstractClass implements InterfaceI {
+	static String str="PlolymorphismAbstraction";
 	public static void main(String arg[])
 	{
 		
 		System.out.println(InterfaceI.i);
 	}
+	public PlolymorphismAbstraction() {
+		System.out.println("In poli");
+	}
+	
+	static {
+		System.out.println("Static Parent");
+	}
+	
+	//if argument constructor found and no argument constructor not found then in child class it will show error
+	public PlolymorphismAbstraction(String a) {
+		System.out.println("In poli argument");
+	}
 
+	static void fuck() {
+		
+	}
 	/*
 	 * cannot reduce the visibility of inherited method
 	 * error for ex, if we use default, protected or private modifier 
@@ -34,7 +50,7 @@ public class PlolymorphismAbstraction extends AbstractClass implements Interface
 		return null;
 	}
 	
-	/*cannot override prvate methods*/
+	/*cannot override private methods*/
 //	@Override
 //	private void addition() {
 //		

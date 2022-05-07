@@ -11,6 +11,9 @@ public class EnumExample {
 		//static final references of Days type is created internally
 		SUNDAY(1),MONDAY(2),TUESDAY(3),WEDNESDAY(4),THURSDAY(5),FRIDAY(6),SATURDAY(7);
 		int value;
+		
+		//public is not permitted will show illegal modifier error at compile time
+//		constructor is implicitly private so cannot use constructor directly
 		Days(int value)
 		{
 			this.value=value;

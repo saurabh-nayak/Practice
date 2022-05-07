@@ -40,7 +40,11 @@ public class StreamEx {
 		System.out.println(productList.stream().min(Comparator.comparing(Product::getPprice)).get().getPprice());
 		
 		List<Integer> intList =  new ArrayList<>();
-		intList.add(10);intList.add(11);intList.add(13);intList.add(15);intList.add(17);intList.add(20);intList.add(25);
+		intList.add(10);intList.add(11);intList.add(14);intList.add(18);intList.add(13);
+		intList.add(15);intList.add(17);intList.add(20);intList.add(25);
+		
+		System.out.println("Divisible by 2 and not by 4.........");
+		intList.stream().filter(i->{if(i%2==0&& i%4!=0) {return true;}else {return false;}}).forEach(System.out::println);
 		
 		//get elements divisble by 5 only
 		intList.stream().filter(i->i%5==0).limit(2).collect(Collectors.toSet()).forEach(p->System.out.println(p));
@@ -139,7 +143,7 @@ public class StreamEx {
 		 * mapToInt() used to return IntStream and takes ToIntFunction as input
 		 * mapToLong() used to return LongStream and takes ToLongFunction as input
 		 * 
-		 * In flatMapToDouble method lambda will return a DoubleStream but in mapToDouble lambda should return double type value
+		 * In flatMapToDouble method, lambda will return a DoubleStream but in mapToDouble lambda should return double type value
 		 * thats the difference
 		 * */
 		listInt.stream().flatMap((i)->{if(i>9989) {blankList.add(i);}return blankList.stream();}).forEach(System.out::println);;
@@ -203,6 +207,8 @@ public class StreamEx {
 		 *
 		 * */
 		//will print 1 to 15 numbers
+		//unorder do not do anything explicit to existing elements in stream it just makes sure that if new elements are
+		//added then there is no need to consider ordering
 		setInt.stream().unordered().parallel().limit(15).forEachOrdered(System.out::println);
 		
 		//will print random 15 numbers whatever comes in pipeline as stream is unordered and forEach used

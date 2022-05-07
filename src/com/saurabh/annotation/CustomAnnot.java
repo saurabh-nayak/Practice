@@ -13,6 +13,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @interface CustomAnnot  {
 	
-	public int value() default 10;
+	 int value() default 10;
 
 }

@@ -9,7 +9,7 @@ class Customer {
 			System.out.println("Less balance; waiting for deposit...");
 			try {
 				wait();
-			} catch (Exception e) {
+			} catch (InterruptedException e) {
 			}
 		}
 		this.amount -= amount;

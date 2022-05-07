@@ -21,11 +21,12 @@ public strictfp interface InterfaceI {
 		 
 	 }
 
-//	 static private, default and public methods allowed in interface
+//	 static private, default, private static and public methods allowed in interface
 	/*
 	 * static private void fun() { }
 	 * static void fun() {}
 	 * public static void fun() {}
+	 * private static void fun2() {}
 	 */
 	 public static void fun() {}
 	InterfaceI add() ;
