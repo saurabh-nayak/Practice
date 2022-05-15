@@ -2,7 +2,7 @@ package com.saurabh.wildcard;
 import java.util.Arrays;  
 import java.util.List; 
 
-//static imports by this can use static elemnents of System class directly without System class
+//static imports by this can use static elements of System class directly without System class
 import static java.lang.System.*;
   
 public class LowerBoundWildcard {  

@@ -1,6 +1,8 @@
 package com.saurabh.polymorphism;
 public class PlolymorphismAbstraction extends AbstractClass implements InterfaceI {
-	static String str="PlolymorphismAbstraction";
+	 String str="PlolymorphismAbstraction";
+	 static String parent="parent";
+	 static int i=10;
 	public static void main(String arg[])
 	{
 		
@@ -30,7 +32,9 @@ public class PlolymorphismAbstraction extends AbstractClass implements Interface
 	 * */
 
 	@Override
- protected strictfp	void fun() {}
+ protected strictfp	void fun() {
+		System.out.println("In fun of parent");
+	}
 
 	/*method overriding happens by just method signatures like throws signature, function name,
 	 * return type. access modifiers like public, protected can be different even we can include strictfp
@@ -52,8 +56,8 @@ public class PlolymorphismAbstraction extends AbstractClass implements Interface
 	
 	/*cannot override private methods*/
 //	@Override
-//	private void addition() {
-//		
-//	}
+	private void addition() {
+		
+	}
 
 }

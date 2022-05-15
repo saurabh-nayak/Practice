@@ -32,7 +32,7 @@ public class VarKeywordEx {
 		}
 		
 		//allowed to store HashMap object also
-		var<Integer,Integer> map= new HashMap<Integer, Integer>();
+		var<Integer,Integer> map= new HashMap<>();
 		
 		//allowed in lambda expression
 		listInteger.stream().forEach((var i)->System.out.println(i));

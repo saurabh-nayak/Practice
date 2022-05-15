@@ -33,6 +33,10 @@ public Employee(int id, String name, String department) {
 public int compareTo(Employee o) {
 	return 1;
 }
+@Override
+public String toString() {
+	return "Employee [id=" + id + ", name=" + name + ", department=" + department + "]";
+}
 
 
 

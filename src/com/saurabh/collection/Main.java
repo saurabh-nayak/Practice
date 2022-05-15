@@ -3,6 +3,7 @@ package com.saurabh.collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -40,17 +41,17 @@ public class Main {
 	    set.add(new Employee(104,"sagar","angular"));
 	    set.add(new Employee(105,"daniel","react"));
 	    set.add(new Employee(106,"derek","java"));
+//	    set.add(null);NullPointerException when we try to add null into TreeSet
 	    set.forEach((a)->{System.out.println("Id: "+a.getId()+" Name: "+a.getName()+" Department: "+a.getDepartment());});
 	    Set<String> set2= new HashSet();
 	    set2.add("abc");set2.add("kyc");
-	    set2.add(null);
 //	    Spliterator<String> si=set2.spliterator();
 //	    System.out.println("Immutable "+si.IMMUTABLE);
 //	    System.out.println(si.estimateSize());
 //	    Spliterator<String> si2= si.trySplit();
 //	    System.out.println("characteristics "+si2.hasCharacteristics(si2.characteristics()));
 //	    System.out.println(si2.estimateSize());
-	    System.out.println(set2);
+	    System.out.println("Set 2 "+set2);
 	    set2.remove(null);
 	    System.out.println(set2);
 	    LinkedList<String> ll = new LinkedList<>();
@@ -63,6 +64,7 @@ public class Main {
 	    map.put(new Employee(103,"sagar","bb"), "sady");
 	    map.put(new Employee(101,"saurabh","java"),"smart");map.put(new Employee(102,"govind","react"),"dumb");
 	    map.put(new Employee(103,"sagar","php"), "common");
+//	    map.put(null, null);//Null pointer exception
 //	    System.out.println("value "+map.get("ket"));
 	    System.out.println("Map: "+map);
 
@@ -70,11 +72,14 @@ public class Main {
 		listEmployee.add(new Employee(101,"saurabh","c"));
 		listEmployee.add(new Employee(103, "parth","d"));
 		listEmployee.add(new Employee(102, "harsh", "b"));
-		listEmployee.add(new Employee(104, "anjana", null));
-		listEmployee.add(new Employee(105, "modi", null));
 		listEmployee.add(new Employee(106, "parth","d"));
 		listEmployee.add(new Employee(109, "harsh", "p"));
 		Collections.sort(listEmployee);
+		//sorting by department name
+		Collections.sort(listEmployee, Comparator.comparing(Employee::getDepartment));
+		System.out.println("Sorting by department name");
+		listEmployee.stream().forEach(System.out::println);
+		listEmployee.parallelStream().forEach(System.out::println);
 	}
 
 }

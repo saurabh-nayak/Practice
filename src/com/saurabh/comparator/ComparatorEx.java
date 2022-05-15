@@ -30,9 +30,13 @@ public class ComparatorEx {
 	 * comparingDouble, comparingInt methods takes ToDoubleFunction/ToIntFunction as arguments as sorting logic
 	 * */
 //	Comparator<Employee> depCompare=Comparator.comparing(Employee::getDepartment,Comparator.nullsFirst(String::compareTo));
-	Comparator<Employee> depCompare=Comparator.comparingInt(Employee::getId).reversed();
-    Collections.sort(listEmployee);
-    Collections.sort(listEmployee,depCompare);
+	
+	Comparator<Employee> depCompare=Comparator.comparingInt(Employee::getId).reversed();//comparingInt method takes single argument that from where need to extract keys
+    
+	//comparing method takes 2 args method to get keys and comparator
+	Collections.sort(listEmployee, Comparator.comparing(Employee::getId, Comparator.reverseOrder()));
+    
+	Collections.sort(listEmployee,depCompare);
 	for(Employee e: listEmployee)
 	{
 		System.out.println(e.getId()+" "+e.getName()+" "+e.getDepartment());
