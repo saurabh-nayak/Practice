@@ -1,5 +1,7 @@
 package com.saurabh.annotation;
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /*
@@ -10,7 +12,8 @@ import java.lang.annotation.Target;
  * 4)can declare with or without public access specifier
  * 
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.METHOD)//target to method class or field
+@Retention(RetentionPolicy.RUNTIME)//till when we need retention of this annotation
 @interface CustomAnnot  {
 	
 	 int value() default 10;
